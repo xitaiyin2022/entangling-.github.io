@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+
+
+  <!-- Page metadata and local assets. The deferred script runs after the HTML is parsed. -->
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Engtanling's Homepage</title>
+    <!--
+      <meta content="An academic homepage template. Replace this description with your research interests and affiliation." name="description"/>
+    -->
+    <meta content="#9b3022" name="theme-color"/>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <script defer src="script.js"></script>
+  </head>
+
+  <body id="top">
+    <!-- Keyboard accessibility: jump past navigation to the main content. -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+
+
+    <!-- Shared, local icons: no external font or icon libraries required. -->
+    <svg aria-hidden="true" class="icon-definitions" xmlns="http://www.w3.org/2000/svg">
+
+
+      <symbol id="icon-person" viewBox="0 0 24 24">
+        <rect height="16" rx="2" width="20" x="2" y="4" />
+        <circle cx="8" cy="10" r="2" />
+        <path d="M5 16c0-4 6-4 6 0m3-7h5m-5 4h5m-5 3h3" />
+      </symbol>
+
+
+      <symbol id="icon-list" viewBox="0 0 24 24">
+        <path d="M9 5h12M9 12h12M9 19h12M2 4l2 2 3-3M2 11l2 2 3-3M2 18l2 2 3-3" />
+      </symbol>
+
+
+      <symbol id="icon-book" viewBox="0 0 24 24">
+        <path d="M12 5v16M12 5C9 2 4 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-2-1-7-2-10 1Z" />
+      </symbol>
+
+
+      <symbol id="icon-cap" viewBox="0 0 24 24">
+        <path d="m2 8 10-5 10 5-10 5L2 8Zm4 3v6c4 3 8 3 12 0v-6m4-3v9" />
+      </symbol>
+
+
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <rect height="16" rx="2" width="20" x="2" y="4" />
+        <path d="m2 5 10 8L22 5" />
+      </symbol>
+
+
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18" />
+      </symbol>
+
+
+      <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path d="M12 21 3 12C-3 5 6-2 12 5c6-7 15 0 9 7l-9 9Z" />
+      </symbol>
+    </svg>
+
+
+
+    <!-- Main navigation: each href must match a section ID below. script.js highlights the current section. -->
+    <header class="site-header">
+      <nav aria-label="Main navigation" class="container site-nav">
+        <!-- Mobile menu: script.js toggles aria-expanded and the is-open class; CSS controls the breakpoint. -->
+        <button aria-controls="navigation" aria-expanded="false" class="menu-toggle" hidden type="button">
+          <span>Menu</span>
+          <svg aria-hidden="true" height="18" viewBox="0 0 20 18" width="19">
+            <path d="M1 3h18M1 9h18M1 15h18" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </button>
+        <div class="nav-links" id="navigation">
+          <a href="#about">Biography</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experiences</a>
+          <a href="#publications">Publications</a>
+          <a href="#awards">Honors &amp; Awards</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#service">Academic Services</a>
+          <a href="#misc">Misc</a>
+        </div>
+      </nav>
+    </header>
+
+
+
+
+
+    <!-- Profile banner: styles.css controls the lake image and its opacity separately from the profile content. -->
+    <div class="profile-cover">
+      <div class="profile-panel">
+        <!-- Replace this image source and alt text with your portrait. -->
+        <img alt="Profile photo placeholder" class="profile-photo" height="176" src="assets/portrait.svg" width="176"/>
+        <div class="profile-info">
+          <h1>Xitai Yin <span> (殷锡泰) </span></h1>
+          <!--
+            <p class="profile-title"> Position @  Institution</p>
+          -->
+          <!-- Replace these spans with <a href="YOUR_URL" aria-label="...">…</a> when ready. -->
+          <div aria-label="Profile link placeholders" class="social-links">
+            <!--
+              <span class="social-icon" title="Google Scholar URL placeholder">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-cap" />
+                </svg>
+                <span class="sr-only">Google Scholar placeholder</span>
+              </span>
+            -->
+            <span class="social-icon" title="GitHub URL placeholder">
+              <svg aria-hidden="true" class="icon">
+                <use href="#icon-code" />
+              </svg>
+              <span class="sr-only">GitHub placeholder</span>
+            </span>
+            <span class="social-icon social-text" title="LinkedIn URL placeholder">in<span class="sr-only">
+            — LinkedIn placeholder</span></span>
+            <!--
+              <span class="social-icon social-text" title="Social profile URL placeholder">X<span class="sr-only">
+              — social profile placeholder</span></span>
+            -->
+            <span class="social-icon" title="Email address placeholder">
+              <svg aria-hidden="true" class="icon">
+                <use href="#icon-mail" />
+              </svg>
+              <span class="sr-only">Email placeholder</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Editable resume content. Duplicate an entry inside a section to add an item; keep all IDs unique. -->
+    <main class="container page-content" id="main">
+
+      <!-- Biography: edit the paragraphs below; optional affiliation text can be enabled when ready. -->
+      <section aria-labelledby="about-heading" id="about">
+        <h2 id="about-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-person" />
+          </svg>
+          About
+        </h2>
+        <p>Hi, I am a research associtate working on T centers in China and exploring the applications
+        of AI in the field of quantum information science, both experimentally and theoretically.</p>
+        <!-- Optional affiliation: I am affiliated with [Your Research Group], where I am advised by [Advisor Name]. -->
+        <p>I obtained my [degree] in [subject] from <span class="placeholder-link">[Previous Institution]</span>.
+        Previously, I was a [previous role] at <span class="placeholder-link">[Organization]</span>,
+        working with <span class="placeholder-link">[Collaborator Name]</span>.</p>
+        <p>My research focuses on <strong>[research area one]</strong> and <strong>[research area
+        two]</strong>, with an emphasis on [the questions, methods, or applications you study].</p>
+      </section>
+
+
+
+      <!-- Education: each resume-entry contains a degree label, program details, and an optional institution logo. -->
+      <section aria-labelledby="education-heading" id="education">
+        <h2 id="education-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-list" />
+          </svg>
+          Education
+        </h2>
+
+
+        <div class="resume-entry">
+          <div class="degree">
+            M.S. 
+          </div>
+          <div>
+            <p>Oct 2025 </p>
+            <p>University of Waterloo <span style="display:inline-block; width:30px;"></span> Waterloo, ON, Canada</p>
+            <p>M.S. in Physics </p>
+            <p>Quantum Technology Specialization </p>
+            <!-- <p>Advisor: <span class="placeholder-link"> [Advisor Name] </span> </p> -->
+          </div>
+          <!--
+            <div aria-label="Institution logo placeholder" class="institution-mark">
+              <svg aria-hidden="true" class="icon">
+                <use href="#icon-cap" />
+              </svg>
+              <span>Logo</span>
+            </div>
+          -->
+        </div>
+
+
+        <div class="resume-entry">
+          <div class="degree">
+            B.S. 
+          </div>
+          <div>
+            <p>June 2024 </p>
+            <p>University of Waterloo <span style="display:inline-block; width:30px;"></span> Waterloo, ON, Canada</p>
+            <p>B.S. in Mathematical Physics (Honours), &ensp; Pure Mathematics Minor </p>
+            <p>Graduate with Distinction </p>
+            <!-- Optional advisor: <p>Advisor: <span class="placeholder-link">[Advisor Name]</span></p> -->
+          </div>
+          <!--
+            <div aria-label="Institution logo placeholder" class="institution-mark alternate">
+              <svg aria-hidden="true" class="icon">
+                <use href="#icon-cap" />
+              </svg>
+              <span>Logo</span>
+            </div>
+          -->
+        </div>
+      </section>
+
+
+
+      <!-- Experience: each experience-entry pairs role details with an optional organization logo. -->
+      <section aria-labelledby="experience-heading" id="experience">
+        <h2 id="experience-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-list" />
+          </svg>
+          Research Experience
+        </h2>
+
+
+        
+        <div class="experience-entry">
+          <div style="width: 100%;">
+            <p><strong>Applied Machine Learning Engineer</strong></p>
+
+            <p style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span>
+                <strong><span class="placeholder-link">MOONS' Industries</span></strong>,
+                Shanghai, China
+              </span>
+              <span style="white-space: nowrap;">January – May 2026</span>
+            </p>
+
+            <p>
+              - Developed attention-based deep learning models for time-series anomaly detection
+              and Prognostics and Health Management (PHM) of industrial rotating machinery.
+            </p>
+          </div>
+
+          <!-- <div aria-label="Organization logo placeholder" class="institution-mark"> -->
+            <!-- <span>Logo</span> -->
+          <!-- </div> -->
+        </div>
+
+
+
+        
+        <div class="experience-entry">
+          <div style="width: 100%;">
+            <p><strong>Research Assistant</strong></p>
+
+            <p style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span>
+                <strong><span class="placeholder-link">Institute for Quantum Computing</span></strong>,
+                Waterloo, Canada
+              </span>
+              <span style="white-space: nowrap;">May – August 2025</span>
+            </p>
+
+            <!-- <p>Supervisor: <span class="placeholder-link">[Supervisor Name]</span></p> -->
+
+            <p>
+              - Characterized quantum errors in germanium hole spin qubits
+              using quantum gate set tomography with pyGSTi.
+            </p>
+          </div>
+
+          <!-- <div aria-label="Organization logo placeholder" class="institution-mark alternate"> -->
+            <!-- <span>Logo</span> -->
+          <!-- </div> -->
+        </div>
+
+
+        <div class="experience-entry">
+          <div style="width: 100%;">
+            <p><strong>Research Assistant</strong></p>
+
+            <p style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span>
+                <strong><span class="placeholder-link">Perimeter Institute for Theoretical Physics</span></strong>,
+                Waterloo, Canada
+              </span>
+              <span style="white-space: nowrap;">September – December 2024</span>
+            </p>
+
+            <!-- <p>Supervisor: <span class="placeholder-link">[Supervisor Name]</span></p> -->
+
+            <p>
+              - Investigated the role of Unruh effect and its associated entropic force in the formation of black holes.
+            </p>
+          </div>
+
+          <!-- <div aria-label="Organization logo placeholder" class="institution-mark alternate"> -->
+            <!-- <span>Logo</span> -->
+          <!-- </div> -->
+        </div>
+
+      </section>
+
+
+
+      <!-- News: each list item contains a date and an announcement; newest entries usually go first. -->
+      
+      <!-- <section aria-labelledby="news-heading" id="news">
+        <h2 id="news-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-list" />
+          </svg>
+          News
+        </h2>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">[Mon. Year]</span>
+            <span>[Add a paper announcement, project update, or research milestone.]</span>
+          </li>
+          <li>
+            <span class="news-date">[Mon. Year]</span>
+            <span>[Add an award, talk, or professional update.]</span>
+          </li>
+          <li>
+            <span class="news-date">[Mon. Year]</span>
+            <span>[Add a previous update here.]</span>
+          </li>
+        </ul>
+      </section> -->
+
+
+
+      <!-- Publications: duplicate an article for each paper. Replace the figure, citation details, and resources. -->
+      
+      
+      <!-- <section aria-labelledby="publications-heading" id="publications">
+        <h2 id="publications-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-book" />
+          </svg>
+          Selected Publications & Manuscripts
+          <small>(Full list: <span class="placeholder-link">[Scholar profile]</span>)</small>
+        </h2>
+        <p class="section-note">Illustrative entries only. Replace with your own verified publications.</p> -->
+        
+
+
+        <!-- <article class="publication">
+          <img alt="Publication figure placeholder" class="publication-image" height="160" loading="lazy" src="assets/publication.svg" width="256"/>
+          <div class="publication-body">
+            <h3>[Paper Title: A Concise Description of Your Research]</h3>
+            <p class="authors"><strong>[Your Name]</strong>, [Coauthor Name], [Coauthor Name]</p>
+            <p class="venue">[Journal or Conference], [Year]</p>
+            <p class="paper-resources"><span>[Paper]</span> <span>[Code]</span> <span>[Project website]</span></p> -->
+            
+            
+            <!-- note: Native disclosure: opens the abstract without JavaScript. -->
+            
+            
+            <!-- <details>
+              <summary>Abstract</summary>
+              <p>[Replace this text with your paper’s abstract or a short, accurate summary of the
+              research question, approach, results, and limitations.]</p>
+            </details>
+          </div>
+        </article> -->
+
+
+        <!-- <article class="publication">
+          <img alt="Publication figure placeholder" class="publication-image" height="160" loading="lazy" src="assets/publication.svg" width="256"/>
+          <div class="publication-body">
+            <h3>[Paper Title: Your Next Research Contribution]</h3>
+            <p class="authors">[Coauthor Name]*, <strong>[Your Name]*</strong>, [Coauthor Name]</p>
+            <p class="contribution">* Equal contribution</p>
+            <p class="venue">[Journal or Conference], [Year]</p>
+            <p class="paper-resources"><span>[Paper]</span> <span>[Code]</span></p>
+            
+            <details>
+              <summary>Abstract</summary>
+              <p>[Add the abstract or a short summary of this publication. Explain what was investigated
+              and what the evidence supports.]</p>
+            </details>
+          </div>
+        </article>
+
+
+        <article class="publication">
+          <img alt="Manuscript figure placeholder" class="publication-image" height="160" loading="lazy" src="assets/publication.svg" width="256"/>
+          <div class="publication-body">
+            <h3>[Manuscript Title: Your Ongoing Research]</h3>
+            <p class="authors"><strong>[Your Name]</strong>, [Coauthor Name]</p>
+            <p class="venue">[Preprint repository], [Year] · Preprint</p>
+            <p class="paper-resources"><span>[Manuscript]</span> <span>[Project website]</span></p>
+            <details>
+              <summary>Abstract</summary>
+              <p>[Add a summary of this manuscript. State its publication status accurately and distinguish
+              proposed work from completed results.]</p>
+            </details>
+          </div>
+        </article>
+      </section> -->
+
+
+
+      <!-- Invited talks: add the talk title, host, and date. -->
+      <!-- <section aria-labelledby="talks-heading" id="talks">
+        <h2 id="talks-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-list" />
+          </svg>
+          Invited Talks
+        </h2>
+        <p><strong>[Title of Your Talk]</strong></p>
+        <ul>
+          <li>
+            [Host Organization or Event], [Month Year]
+          </li>
+        </ul>
+      </section> -->
+
+
+
+      <!-- Honors and awards: one list item per award. -->
+      <section aria-labelledby="awards-heading" id="awards">
+        <h2 id="awards-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-list" />
+          </svg>
+          Selected Honors & Awards
+        </h2>
+        <ul>
+          <li>
+            [Award or Scholarship Name], [Awarding Organization], [Year]
+          </li>
+          <li>
+            [Academic Honor], [Institution], [Year]
+          </li>
+          <li>
+            [Competition or Research Award], [Year]
+          </li>
+        </ul>
+      </section>
+
+
+
+      <!-- Teaching: edit the role heading and course list. -->
+      <!-- <section aria-labelledby="teaching-heading" id="teaching">
+        <h2 id="teaching-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-list" />
+          </svg>
+          Teaching
+        </h2>
+        <p><strong>[Teaching Role]</strong></p>
+        <ul>
+          <li>
+            [Course Code]: [Course Title] — [Term Year]
+          </li>
+          <li>
+            [Course Code]: [Course Title] — [Term Year]
+          </li>
+        </ul>
+      </section> -->
+
+
+
+      <!-- Academic service: list reviewing and volunteer roles. -->
+<!--       
+      <section aria-labelledby="service-heading" id="service">
+        <h2 id="service-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-list" />
+          </svg>
+          Academic Services
+        </h2>
+        <p><strong>Reviewer:</strong> [Conference or Journal Names]</p>
+        <p><strong>Volunteer:</strong> [Event or Organization], [Year]</p>
+      </section> -->
+      
+      <!-- Quantum (Lab) Courses -->
+      <section aria-labelledby="misc-heading" id="misc">
+        <h2 id="misc-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-book" />
+          </svg>
+          Miscellaneous
+        </h2>
+        <p>Outside of research, I enjoy [hobby], [hobby], and [hobby].</p>
+        <p>[Add a personal interest, activity, or a short story you would like to share.]</p>
+      </section>
+    </main>
+
+
+      <!-- Personal interests: replace the placeholder paragraphs with your own text. -->
+      <section aria-labelledby="misc-heading" id="misc">
+        <h2 id="misc-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-heart" />
+          </svg>
+          Miscellaneous
+        </h2>
+        <p>Outside of research, I enjoy [hobby], [hobby], and [hobby].</p>
+        <p>[Add a personal interest, activity, or a short story you would like to share.]</p>
+      </section>
+    </main>
+
+
+
+    <!-- Footer: contact information, manual update date, and layout attribution. -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div>
+          <strong>Personal Email</strong>
+          <p>x7yin[at]uwaterloo.ca</p>
+        </div>
+        <div>
+          <!-- <p>Last updated: [Month Year]</p> -->
+          <p class="footer-credit">Last Updated: May 2026</p>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- Back to top: the anchor works without JavaScript; script.js reveals it after scrolling 250 pixels. -->
+    <!-- <a aria-label="Back to top" class="back-to-top" href="#top">↑ <span>Top</span></a> -->
+  </body>
+</html>
