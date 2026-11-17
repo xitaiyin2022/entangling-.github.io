@@ -26,7 +26,8 @@ window.matchMedia('(max-width: 640px)').addEventListener('change', closeMenu);
 
 const backToTop = document.querySelector('.back-to-top');
 function updateScroll() {
-  backToTop.classList.toggle('is-visible', window.scrollY > 250);
+  // The optional back-to-top link may be commented out in index.html.
+  backToTop?.classList.toggle('is-visible', window.scrollY > 250);
   // Follow the current section, including sections without a navigation item.
   let active = null;
   for (const section of document.querySelectorAll('main section[id]')) {

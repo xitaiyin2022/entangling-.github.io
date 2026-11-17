@@ -153,14 +153,14 @@ button {
 .site-nav {
   min-height: 57px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 8px 21px;
   padding-block: 16px;
 }
@@ -361,6 +361,34 @@ h2 small {
 
 
 
+/* About: bulleted research topics with descriptions beneath each topic title. */
+.research-interests-heading {
+  margin: 22px 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.research-interests-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.research-interests-list li {
+  margin: 0;
+}
+
+.research-interests-list li::marker {
+  color: var(--accent);
+}
+
+.research-interests-list p {
+  margin: 3px 0 0;
+}
+
+
+
 /* Education and experience entries: grid columns reserve space for degree labels and optional logos. */
 .resume-entry {
   display: grid;
@@ -421,6 +449,120 @@ h2 small {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+
+
+/* Graduate courses: subgroup headings and full-width entries reuse the experience layout. */
+.course-group + .course-group {
+  margin-top: 28px;
+}
+
+.course-group h3 {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.course-group .experience-entry:last-child {
+  margin-bottom: 0;
+}
+
+/* Nested category for online courses within Other Courses. */
+.course-subgroup {
+  margin-top: 22px;
+}
+
+.course-subgroup h4 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Simple course list: one course on each line without bullet markers. */
+.other-courses-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.other-courses-list li {
+  margin: 0;
+}
+
+.graduate-course-entry {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* Use hyphens for course descriptions while preserving semantic lists and hanging indentation. */
+.graduate-course-entry li::marker {
+  content: '-  ';
+}
+
+.graduate-course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 20px;
+}
+
+
+
+/* Honors: scholarship details and dates wrap naturally into a single column on small screens. */
+.honor-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 22px;
+}
+
+.honor-entry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px 24px;
+  margin: 0;
+}
+
+.honor-details {
+  flex: 1 1 360px;
+}
+
+.honor-entry p {
+  margin: 0;
+}
+
+.honor-meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+
+/* Personal interests: SVG markers align with the first text line and stay decorative for screen readers. */
+.interest-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 15px;
+}
+
+.interest-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+}
+
+.interest-list .icon {
+  color: var(--accent);
+  margin-top: 2px;
 }
 
 

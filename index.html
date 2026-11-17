@@ -61,8 +61,55 @@
       </symbol>
 
 
+      <!-- GitHub logo: filled shape inherits the banner icon color. -->
+      <symbol id="icon-github" viewBox="0 0 16 16">
+        <path fill="currentColor" stroke="none" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+      </symbol>
+
+
       <symbol id="icon-heart" viewBox="0 0 24 24">
         <path d="M12 21 3 12C-3 5 6-2 12 5c6-7 15 0 9 7l-9 9Z" />
+      </symbol>
+
+
+      <!-- Atom symbol: blue orbital paths with a vertical orbit and an orange nucleus. -->
+      <symbol id="icon-atom" viewBox="0 0 24 24">
+        <g fill="none" stroke="#3278b5">
+          <ellipse cx="12" cy="12" rx="4" ry="10" />
+          <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(60 12 12)" />
+          <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(120 12 12)" />
+        </g>
+        <circle cx="12" cy="12" r="1.7" fill="#f39a32" stroke="none" />
+      </symbol>
+
+
+      <!-- Interest icons: reuse these symbols as list markers in the personal interests section. -->
+      <symbol id="icon-hiking" viewBox="0 0 24 24">
+        <path d="m2 20 7-13 5 8 3-5 5 10H2Z" />
+        <path d="m6 13 3 2 3-3m3 2 2 2 2-2" />
+      </symbol>
+
+
+      <symbol id="icon-piano" viewBox="0 0 24 24">
+        <!-- Miniature grand piano: raised triangular lid, keyboard, and legs. -->
+        <g fill="currentColor" stroke="none">
+          <path d="m4 10 13-8 3 8H4Z" />
+          <path d="M3 12h18v2c0 1.7-2.5 3-5 3H3v-5Z" />
+          <rect x="4" y="17" width="2" height="5" rx="0.5" />
+          <rect x="17" y="16" width="2" height="6" rx="0.5" />
+        </g>
+        <path d="M5 13.5h7" stroke="#f9f9f9" stroke-width="1.5" stroke-linecap="butt" />
+        <path d="M7 13v1m2-1v1m2-1v1" stroke="currentColor" stroke-width="0.8" />
+      </symbol>
+
+
+      <symbol id="icon-swimming" viewBox="0 0 24 24">
+        <!-- Filled freestyle silhouette with a single curved waterline. -->
+        <g fill="currentColor" stroke="none">
+          <circle cx="18" cy="10" r="2.6" />
+          <path d="M8 5.4 11.8 6a2 2 0 0 1 1.5 1.1l3.2 7.1-7.4-1.7 3-1.8-1.1-2.6-3.3-.5a1.1 1.1 0 0 1 .3-2.2Z" />
+        </g>
+        <path d="M2 15.2C8 12.4 15.4 19.2 22 16.2" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" />
       </symbol>
     </svg>
 
@@ -82,11 +129,13 @@
           <a href="#about">Biography</a>
           <a href="#education">Education</a>
           <a href="#experience">Experiences</a>
-          <a href="#publications">Publications</a>
+          <a href="#graduate-courses">Graduate Courses</a>
+          <!-- <a href="#publications">Publications</a> -->
           <a href="#awards">Honors &amp; Awards</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#service">Academic Services</a>
-          <a href="#misc">Misc</a>
+          <!-- <a href="#teaching">Teaching</a> -->
+          <!-- <a href="#service">Academic Services</a> -->
+          <a href="#skills">Skills</a>
+          <a href="#misc">Personal Interests</a>
         </div>
       </nav>
     </header>
@@ -117,16 +166,18 @@
             -->
             <span class="social-icon" title="GitHub URL placeholder">
               <svg aria-hidden="true" class="icon">
-                <use href="#icon-code" />
+                <use href="#icon-github" />
               </svg>
               <span class="sr-only">GitHub placeholder</span>
             </span>
+            <!-- LinkedIn: change this outer span to an a tag with href="https://www.linkedin.com/in/YOUR_PROFILE/". -->
             <span class="social-icon social-text" title="LinkedIn URL placeholder">in<span class="sr-only">
             — LinkedIn placeholder</span></span>
             <!--
               <span class="social-icon social-text" title="Social profile URL placeholder">X<span class="sr-only">
               — social profile placeholder</span></span>
             -->
+            <!-- Email: change this outer span to an a tag with href="mailto:YOUR_EMAIL"; keep the SVG inside. -->
             <span class="social-icon" title="Email address placeholder">
               <svg aria-hidden="true" class="icon">
                 <use href="#icon-mail" />
@@ -152,13 +203,34 @@
           About
         </h2>
         <p>Hi, I am a research associtate working on T centers in China and exploring the applications
-        of AI in the field of quantum information science, both experimentally and theoretically.</p>
+        of AI in the field of quantum information science, both experimentally and theoretically. 
+        Here are my full
+        <a href="assets/CV.pdf" target="_blank" rel="noopener">CV</a>
+        and
+        <a href="assets/CV_zh.pdf" target="_blank" rel="noopener">CV_zh</a>.</p>
         <!-- Optional affiliation: I am affiliated with [Your Research Group], where I am advised by [Advisor Name]. -->
-        <p>I obtained my [degree] in [subject] from <span class="placeholder-link">[Previous Institution]</span>.
+        <!-- <p>I obtained my [degree] in [subject] from <span class="placeholder-link">[Previous Institution]</span>.
         Previously, I was a [previous role] at <span class="placeholder-link">[Organization]</span>,
         working with <span class="placeholder-link">[Collaborator Name]</span>.</p>
         <p>My research focuses on <strong>[research area one]</strong> and <strong>[research area
-        two]</strong>, with an emphasis on [the questions, methods, or applications you study].</p>
+        two]</strong>, with an emphasis on [the questions, methods, or applications you study].</p> -->
+
+
+        <!-- Research interests: add one list item per topic, followed by a short description. -->
+        <h3 class="research-interests-heading" id="research-interests-heading">Research Interests</h3>
+        <ul aria-labelledby="research-interests-heading" class="research-interests-list">
+          <li>
+            <strong>T centers</strong>
+            <p>Research on T centers for quantum information science.</p>
+          </li>
+
+
+          <li>
+            <strong>AI for quantum information science</strong>
+            <p>Exploring applications of artificial intelligence to experimental and theoretical
+              problems in quantum information science.</p>
+          </li>
+        </ul>
       </section>
 
 
@@ -223,9 +295,9 @@
       <section aria-labelledby="experience-heading" id="experience">
         <h2 id="experience-heading">
           <svg aria-hidden="true" class="icon">
-            <use href="#icon-list" />
+            <use href="#icon-atom" />
           </svg>
-          Research Experience
+          Research and Work Experience
         </h2>
 
 
@@ -291,7 +363,7 @@
                 <strong><span class="placeholder-link">Perimeter Institute for Theoretical Physics</span></strong>,
                 Waterloo, Canada
               </span>
-              <span style="white-space: nowrap;">September – December 2024</span>
+              <span style="white-space: nowrap;">Sept – Dec 2024</span>
             </p>
 
             <!-- <p>Supervisor: <span class="placeholder-link">[Supervisor Name]</span></p> -->
@@ -306,6 +378,112 @@
           <!-- </div> -->
         </div>
 
+      </section>
+
+
+
+      <!-- Advanced graduate courses: duplicate an entry within the relevant group to add a course. -->
+      <section aria-labelledby="graduate-courses-heading" id="graduate-courses">
+        <h2 id="graduate-courses-heading">
+          <svg aria-hidden="true" class="icon">
+            <use href="#icon-atom" />
+          </svg>
+          Advanced Graduate Courses
+        </h2>
+
+
+        <!-- Quantum Lab: laboratory courses and experimental projects. -->
+        <div aria-labelledby="quantum-lab-heading" class="course-group" role="group">
+          <h3 id="quantum-lab-heading">Quantum Lab</h3>
+
+          <div class="experience-entry graduate-course-entry">
+            <div>
+              <p><strong>Laboratory on Superconducting Qubits Engineering</strong></p>
+
+              <!-- Institution and term share a row on wide screens and wrap on smaller screens. -->
+              <p class="graduate-course-meta">
+                <!-- <span><strong>University of Waterloo</strong></span> -->
+                <span><time datetime="2025-05">May 2025</time> – <time datetime="2025-08">August 2025</time></span>
+              </p>
+              <!-- <p>Instructor: Chris Wilson</p> -->
+
+              <ul>
+                <li>Characterized Josephson junctions, superconducting niobium wires, microwave
+                  resonators, and transmon qubits through transport, microwave, and coherence
+                  measurements, including Hahn-echo control.</li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <div class="experience-entry graduate-course-entry">
+            <div>
+              <p><strong>Laboratory on Photonic Quantum Information Processing</strong></p>
+
+              <p class="graduate-course-meta">
+                <!-- <span><strong>University of Waterloo</strong></span> -->
+                <span><time datetime="2025-01">January 2025</time> – <time datetime="2025-04">April 2025</time></span>
+              </p>
+              <!-- <p>Instructor: Kevin Resch</p> -->
+
+              <ul>
+                <li>Performed quantum state and process tomography, analyzed photon statistics
+                  and Hong–Ou–Mandel interference, and prepared polarization-entangled Bell states
+                  to test the CHSH Bell inequality.</li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <div class="experience-entry graduate-course-entry">
+            <div>
+              <p><strong>Laboratory on Control of NMR Quantum System</strong></p>
+
+              <p class="graduate-course-meta">
+                <!-- <span><strong>University of Waterloo</strong></span> -->
+                <span><time datetime="2024-09">September 2024</time> – <time datetime="2024-12">December 2024</time></span>
+              </p>
+              <!-- <p>Instructor: David Cory and Michael Grabowecky</p> -->
+
+              <!-- <ul> -->
+                 <p>- Simulated and characterized noisy NMR spin dynamics, implemented calibrated
+                  two-spin quantum gates and randomized benchmarking, and performed DC magnetic-field
+                  sensing with NV centers.</p>
+              <!-- </ul> -->
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Other Courses: one course per list item; retain audit and online-study labels. -->
+        <div aria-labelledby="other-courses-heading" class="course-group" role="group">
+          <h3 id="other-courses-heading">Other UW Courses</h3>
+
+          <ul class="other-courses-list" role="list">
+            <li>Spin-based Quantum Information Processing</li>
+            <li>Quantum Sensing</li>
+            <li>Quantum Communication</li>
+            <li>Mathematics for Quantum Information</li>
+            <li>Introduction to Machine Learning (CS 680, audit)</li>
+          </ul>
+
+
+          <!-- Online study is grouped separately from the courses listed above. -->
+          <div aria-labelledby="online-courses-heading" class="course-subgroup" role="group">
+            <h4 id="online-courses-heading"> Learning Online Open Courses:</h4>
+
+            <ul class="other-courses-list" role="list">
+              <li>Atomic and Optical Physics I (MIT 8.421)</li>
+              <li>Quantum Photonics (Stanford EE 340)</li>
+              <li>Machine Learning (Stanford CS 229)</li>
+              <li>Reinforcement Learning (Stanford CS 234)</li>
+              <li>Engineering AI Agents (Stanford CS 329Z)</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
 
@@ -427,23 +605,37 @@
 
 
 
-      <!-- Honors and awards: one list item per award. -->
+      <!-- Honors and awards: each entry pairs scholarship details with its location and date. -->
       <section aria-labelledby="awards-heading" id="awards">
         <h2 id="awards-heading">
           <svg aria-hidden="true" class="icon">
             <use href="#icon-list" />
           </svg>
-          Selected Honors & Awards
+          Selected Honors &amp; Awards
         </h2>
-        <ul>
-          <li>
-            [Award or Scholarship Name], [Awarding Organization], [Year]
+        <ul class="honor-list">
+          <li class="honor-entry">
+            <div class="honor-details">
+              <p><strong>Graduate Research Studentship</strong> — <em>Full Scholarship</em></p>
+              <p>Quantum Technology Specialization Master Program</p>
+              <p>University of Waterloo</p>
+            </div>
+            <div class="honor-meta">
+              <!-- <p>Ontario, Canada</p> -->
+              <p><time datetime="2024-09">Sept 2024</time> – <time datetime="2025-08">August 2025</time></p>
+            </div>
           </li>
-          <li>
-            [Academic Honor], [Institution], [Year]
-          </li>
-          <li>
-            [Competition or Research Award], [Year]
+
+
+          <li class="honor-entry">
+            <div class="honor-details">
+              <p><strong>Faculty of Science–Chinese Universities Program</strong></p>
+              <p>Entrance Scholarship, University of Waterloo</p>
+            </div>
+            <div class="honor-meta">
+              <!-- <p>Ontario, Canada</p> -->
+              <p><time datetime="2022-08">August 2022</time></p>
+            </div>
           </li>
         </ul>
       </section>
@@ -484,30 +676,54 @@
         <p><strong>Volunteer:</strong> [Event or Organization], [Year]</p>
       </section> -->
       
-      <!-- Quantum (Lab) Courses -->
-      <section aria-labelledby="misc-heading" id="misc">
-        <h2 id="misc-heading">
+
+
+      <!-- Skills: programming languages, scientific software, and research tools. -->
+      <section aria-labelledby="skills-heading" id="skills">
+        <h2 id="skills-heading">
           <svg aria-hidden="true" class="icon">
-            <use href="#icon-book" />
+            <use href="#icon-list" />
           </svg>
-          Miscellaneous
+          Skills
         </h2>
-        <p>Outside of research, I enjoy [hobby], [hobby], and [hobby].</p>
-        <p>[Add a personal interest, activity, or a short story you would like to share.]</p>
+        <p><strong>Programming &amp; tools:</strong> Python (QuTiP, PyTorch), Mathematica,
+          LabVIEW, C++, and Lumerical FDTD.</p>
       </section>
-    </main>
 
 
-      <!-- Personal interests: replace the placeholder paragraphs with your own text. -->
+
+      <!-- Personal interests: each activity uses a matching local SVG instead of a bullet. -->
       <section aria-labelledby="misc-heading" id="misc">
         <h2 id="misc-heading">
           <svg aria-hidden="true" class="icon">
             <use href="#icon-heart" />
           </svg>
-          Miscellaneous
+          Personal Interests
         </h2>
-        <p>Outside of research, I enjoy [hobby], [hobby], and [hobby].</p>
-        <p>[Add a personal interest, activity, or a short story you would like to share.]</p>
+        <ul class="interest-list">
+          <li>
+            <svg aria-hidden="true" class="icon">
+              <use href="#icon-hiking" />
+            </svg>
+            <div><strong>Hiking</strong></div>
+          </li>
+
+
+          <li>
+            <svg aria-hidden="true" class="icon">
+              <use href="#icon-piano" />
+            </svg>
+            <div><strong>Piano:</strong> Chinese Grade 10.</div>
+          </li>
+
+
+          <li>
+            <svg aria-hidden="true" class="icon">
+              <use href="#icon-swimming" />
+            </svg>
+            <div><strong>Swimming:</strong> 100 m freestyle (long-course meters): 1:03.25.</div>
+          </li>
+        </ul>
       </section>
     </main>
 
