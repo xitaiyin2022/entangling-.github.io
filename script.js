@@ -20,7 +20,7 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
     closeMenu();
     menu.focus();
-  }
+  } 
 });
 window.matchMedia('(max-width: 640px)').addEventListener('change', closeMenu);
 
